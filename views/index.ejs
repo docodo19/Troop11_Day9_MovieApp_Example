@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="bluemarker">
+
+<head>
+    <title>bluemarker</title>
+    <meta charset="utf-8">
+    <base href="/" />
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/ngApp/css/site.css"/>
+</head>
+
+<body>
+    <div class="container">
+        <h1>bluemarker</h1>
+        <div>
+            <a href="/">Home</a> /
+            <a href="/about">About</a> /
+            <a href="/movie">Movies</a>
+        </div>
+        <hr />
+
+        <!-- <ui-view class="view"></ui-view> -->
+        <div class="view" ui-view></div>
+
+
+
+    </div>
+
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/angular-touch/angular-touch.min.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+    <!-- custom js files -->
+    <script src="/ngApp/app.js"></script>
+    <!-- angular services -->
+    <script src="/ngApp/services/movieService.js"></script>
+    <!-- angular controllers -->
+    <script src="/ngApp/controllers/controllers.js"></script>
+    <script src="/ngApp/controllers/movie/movieController.js"></script>
+    <script src="/ngApp/controllers/movie/movieCreateController.js"></script>
+    <script src="/ngApp/controllers/movie/movieDetailsController.js"></script>
+
+</body>
+
+</html>

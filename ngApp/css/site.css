@@ -1,0 +1,50 @@
+.ng-invalid.ng-touched {
+    background-color: #FA787E;
+}
+
+.movieImg {
+    cursor: pointer;
+    cursor: hand;
+}
+
+/*.view.ng-enter {
+    -webkit-transition: 1s linear all;
+    -o-transition: 1s linear all;
+    transition: 1s linear all;
+
+    opacity:0;
+}
+.view.ng-enter-active {
+    opacity:1;
+}*/
+
+.view.ng-enter, .view.ng-leave {
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+    position:relative;
+    height: 1000px;
+}
+
+.view.ng-enter {
+  z-index:100;
+  left:100px;
+  opacity:0;
+}
+
+.view.ng-enter.ng-enter-active {
+  left:0;
+  opacity:1;
+}
+
+.view.ng-leave {
+  z-index:101;
+  opacity:1;
+  left:0;
+}
+
+.view.ng-leave.ng-leave-active {
+  left:-100px;
+  opacity:0;
+}

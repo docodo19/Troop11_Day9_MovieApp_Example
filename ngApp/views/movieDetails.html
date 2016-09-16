@@ -1,0 +1,64 @@
+<div ng-show="!vm.isEditMode">
+    <div class="modal-header">
+        <h1>{{vm.movie.title}}</h1>
+    </div>
+
+    <div class="modal-body">
+        <img ng-src="{{vm.movie.imageUrl}}" class="img-responsive img-rounded" alt="" />
+        <h4>Director: {{vm.movie.director}}</h4>
+    </div>
+
+    <div class="modal-footer">
+
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-block btn-success btn-sm" ng-click="vm.closeModal()">Close</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-block btn-danger btn-sm" ng-click="vm.deleteMovie()">Delete</button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-block btn-warning btn-sm" ng-click="vm.toggleEditMode()">Edit</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Show when isEditMode is True -->
+<div ng-show="vm.isEditMode">
+
+    <div class="modal-header">
+        <h1>Edit Movie</h1>
+    </div>
+
+    <div class="modal-body">
+
+        <form ng-submit="vm.saveMovie()">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" ng-model="vm.movie.title">
+            </div>
+
+            <div class="form-group">
+                <label for="director">Director</label>
+                <input type="text" class="form-control" ng-model="vm.movie.director">
+            </div>
+
+            <div class="form-group">
+                <label for="imageUrl">Image URL</label>
+                <input type="text" class="form-control" ng-model="vm.movie.imageUrl">
+            </div>
+
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-block btn-sm" value="Save">
+                <input type="button" class="btn btn-danger btn-block btn-sm" value="Cancel" ng-click="vm.cancelSave()">
+            </div>
+        </form>
+
+    </div>
+
+</div>

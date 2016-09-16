@@ -1,0 +1,25 @@
+<h1>List of Movies</h1>
+
+<p>
+    <a href="/movie/create"><i>Create a new movie</i></a>
+</p>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <input type="text" class="form-control" ng-model="movieTitle" placeholder="search for a movie...">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3 view" ng-repeat='m in vm.movies|filter:movieTitle' ng-show="vm.showMovie">
+
+        <img
+        ng-src="{{m.imageUrl}}"
+        class="img-responsive img-rounded movieImg"
+        alt="Responsive image"
+        ng-click="vm.getMovieDetails(m.id)">
+
+    </div>
+</div>
