@@ -1,7 +1,7 @@
 <h1>Create a new movie</h1>
 
 <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-6">
 
         <form ng-submit="vm.saveMovie()" name="movieForm" novalidate>
 
@@ -26,6 +26,20 @@
             </div>
 
         </form>
-
     </div>
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <button class='btn btn-info' ng-click='vm.pickFile()'>
+                <i class="fa fa-picture-o fa-lg" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <img ng-src="{{vm.file.url}}" class="img-responsive img-rounded filepicker-image" alt="" />
+            </div>
+        </div>
+    </div>
+
 </div>

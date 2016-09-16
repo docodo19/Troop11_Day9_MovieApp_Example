@@ -1,10 +1,14 @@
 namespace bluemarker {
 
-    angular.module('bluemarker', ['ui.router', 'ngResource', 'ui.bootstrap', 'ngAnimate']).config((
+    angular.module('bluemarker', ['ui.router', 'ngResource', 'ui.bootstrap', 'ngAnimate', 'angular-filepicker']).config((
         $stateProvider: ng.ui.IStateProvider,
         $urlRouterProvider: ng.ui.IUrlRouterProvider,
-        $locationProvider: ng.ILocationProvider
+        $locationProvider: ng.ILocationProvider,
+        filepickerProvider
     ) => {
+
+        filepickerProvider.setKey('AmGSp5Y0qSxqVqiXsAF8Yz');
+
         // Define routes
         $stateProvider
             .state('home', {
